@@ -1,0 +1,5 @@
+<ul class="list-group mt-3">
+    <% blogList.forEach(blog => {%>
+    <li data-id="<%= blog.id %>>" class="list-group-item"><%= blog.title %></li>
+    <% }) %>
+</ul>

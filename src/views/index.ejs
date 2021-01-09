@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>EJS Welcome to <%= title %></p>
-  </body>
-</html>
+<%- include('layout/header') -%>
+  <h1><%= title %></h1>
+  <p>EJS Welcome to <%= title %></p>
+  <button class="btn btn-primary btn-sm">click me</button>
+  <%- include('components/userinfo', {self}) -%>
+  <%- include('components/bloglist', {blogList}) -%>
+<%- include('layout/footer', {bsjs: true}) -%>
